@@ -13,3 +13,9 @@ export interface Testimonial {
   date: string
   image: string
 }
+
+export interface Faq {
+  id: string
+  question: string
+  answer: string
+}
