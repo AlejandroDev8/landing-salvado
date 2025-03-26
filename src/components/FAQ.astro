@@ -1,0 +1,48 @@
+---
+import { faqs } from "@/data/faqs";
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">
+      Preguntas Frecuentes
+    </h2>
+
+    <div class="max-w-3xl mx-auto">
+      <div class="space-y-6">
+        {
+          faqs.map((faq) => (
+            <div class="border-b border-gray-200 pb-6 last:border-b-0">
+              <details class="group">
+                <summary class="flex justify-between items-center cursor-pointer list-none">
+                  <h3 class="text-lg font-semibold text-gray-900 group-open:text-primary">
+                    {faq.question}
+                  </h3>
+                  <span class="text-primary group-open:rotate-180 transition-transform duration-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </span>
+                </summary>
+                <div class="mt-4 text-gray-600">
+                  <p>{faq.answer}</p>
+                </div>
+              </details>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
