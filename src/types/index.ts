@@ -4,3 +4,12 @@ export interface Service {
   description: string
   icon: string
 }
+
+export interface Testimonial {
+  id: string
+  name: string
+  role: string
+  content: string
+  date: string
+  image: string
+}
